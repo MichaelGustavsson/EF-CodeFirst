@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using TPH.Models;
 
 namespace TPH.Controllers
 {
@@ -10,7 +11,13 @@ namespace TPH.Controllers
     {
         public ActionResult Index()
         {
-            return View();
+            var db = new CourseContext();
+
+            using (db)
+            {
+                var instructors = db.Person.ToList();
+            }
+                return View();
         }
 
         public ActionResult About()
