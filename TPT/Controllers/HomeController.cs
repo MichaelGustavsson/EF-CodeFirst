@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using TPT.Models;
 
 namespace TPT.Controllers
 {
@@ -10,6 +11,9 @@ namespace TPT.Controllers
     {
         public ActionResult Index()
         {
+            var db = new CourseContext();
+            var q = from i in db.Persons.OfType<Student>() select i;
+            var result = q.ToList();
             return View();
         }
 

@@ -11,13 +11,10 @@ namespace TPH.Controllers
     {
         public ActionResult Index()
         {
-            var db = new CourseContext();
-
-            using (db)
-            {
-                var instructors = db.Person.ToList();
-            }
-                return View();
+            var db = new CourseContext();            
+            var q = from i in db.Person.OfType<Instructor>() select i;
+            var result = q.ToList();
+            return View();
         }
 
         public ActionResult About()
