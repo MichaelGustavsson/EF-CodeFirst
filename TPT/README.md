@@ -2,6 +2,8 @@
 
 ### Domän modell
 
+Att ändra ifrån standard beteendet i Entity Framework, det vill säga *Table per Hierarchy* till att få en tabell per klass *Table per Type* är väldigt enkelt. Göra bara nedanstående ändringar på klassdefinitionerna.
+
 ```
     [Table("Persons")]
     public class Person
@@ -42,6 +44,10 @@
 
 ### Tabell design
 
+När sedan databasen skapas kommer en tabell per klass att definieras se bilden nedan.
+
 [![tabledesign-TPT.png](https://i.postimg.cc/rmYd46zj/tabledesign-TPT.png)](https://postimg.cc/CBkLyQGn)
+
+Varje tabell kommer nu endast att innehålla information om sin egen entitet.
 
 [![tableresult-TPT.png](https://i.postimg.cc/v8rFDrjg/tableresult-TPT.png)](https://postimg.cc/QVdnyTjh)
