@@ -2,7 +2,7 @@
 
 ### Domän modell
 
-[![coursemodel.png](https://i.postimg.cc/cCJhcNsb/coursemodel.png)](https://postimg.cc/R6jwMyJ7)
+[![coursemodel.png](https://i.postimg.cc/ZqZrchHx/coursemodel.png)](https://postimg.cc/5X7Y4TZX)
 
 ### Tabell design
 
