@@ -51,8 +51,11 @@ För att generera databasstrukturen med Entity Framework *Code First* behöver v
 
 ### Tabell design
 
+Ovanstående kod kommer att generera följande tabellstruktur, se bild nedan.
+Tabellen består av fält som är kombinerade ifrån alla tre klasserna. Dessutom skapar Entity Framework ett extra fält för att definiera  vilken klass som informationen härrör ifrån. Se bilden tabell resultat.
+
 [![tabledesign-TPH.png](https://i.postimg.cc/zGQsb0kN/tabledesign-TPH.png)](https://postimg.cc/v4WqC7j2)
 
-### Tabell resultat
+#### Tabell resultat
 
 [![tableresult-TPH.png](https://i.postimg.cc/QdvzxVXx/tableresult-TPH.png)](https://postimg.cc/21FG0kbP)
