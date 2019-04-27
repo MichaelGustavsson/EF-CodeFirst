@@ -1,6 +1,8 @@
 # Table per Hierarchy (TPH)
 
-### Domän modell
+## Vad är Table per Hierarchy
+**TPH** eller *Table per Hierarchy* är standard strategin som Entity Framework använder sig av för att skapa tabeller när Entity Framework
+upptäcker en arvshierarki mellan klasser. Ta till exempel nedanstående klassdiagram som består av en klass *Person* som ärvs av klasserna *Student* och *Instructor*.
 
 [![coursemodel.png](https://i.postimg.cc/ZqZrchHx/coursemodel.png)](https://postimg.cc/5X7Y4TZX)
 
