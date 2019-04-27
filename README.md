@@ -6,3 +6,5 @@ tabeller i våra databaser.
 För mer information se README filerna i respektive projekt.
 
 All kod är skriven i Visual Studio 2017 för Windows.
+
+[coursemodel.png](https://postimg.cc/BjxHJmJD)
