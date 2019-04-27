@@ -60,7 +60,7 @@ Tabellen består av fält som är kombinerade ifrån alla tre klasserna. Dessuto
 
 [![tableresult-TPH.png](https://i.postimg.cc/QdvzxVXx/tableresult-TPH.png)](https://postimg.cc/21FG0kbP)
 
-### För- och nack- delar
+### Fördelar och nackdelar
 #### Fördelar
 Fördelen med denna strategi är dess enkelhet och prestanda. Det behövs inga komplexa *joins* mellan tabeller för att hämta data. Databasen är i princip denormaliserad.
 #### Nackdelar
