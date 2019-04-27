@@ -1,4 +1,6 @@
 # TPT Table per Type
+## Varför?
+Syftet med *Table per Type* strategin är att stödja databas  normalisering, vilket enkelt utryckt bland annat skall minimera dubbletter och kolumner med onödiga *null* värden.
 
 ### Domän modell
 
