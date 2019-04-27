@@ -7,4 +7,4 @@ För mer information se README filerna i respektive projekt.
 
 All kod är skriven i Visual Studio 2017 för Windows.
 
-[coursemodel.png](https://postimg.cc/BjxHJmJD)
+[![coursemodel.png](https://i.postimg.cc/W1yn6yK9/coursemodel.png)](https://postimg.cc/BjxHJmJD)
