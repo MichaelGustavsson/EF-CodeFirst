@@ -78,6 +78,7 @@ Detta i sin tur gör att vi måste ange vilken klass vi egentligen vill mappa da
 
     return View(instructors);
 ```
+## Summering
 ### Fördelar och nackdelar
 #### Fördelar
 Fördelen med denna strategi är dess enkelhet och prestanda. Det behövs inga komplexa *joins* mellan tabeller för att hämta data. Databasen är i princip denormaliserad.
