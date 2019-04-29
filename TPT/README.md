@@ -75,6 +75,6 @@ Detta i sin tur gör att vi måste ange vilken klass vi egentligen vill mappa da
 ## Summering
 ### Fördelar och nackdelar
 #### Fördelar
-Fördelen med denna strategi är dess enkelhet och prestanda. Det behövs inga komplexa *joins* mellan tabeller för att hämta data. Databasen är i princip denormaliserad.
+Fördelen med denna strategi är att databasen är normaliserad.
 #### Nackdelar
-Den största nackdelen är att strategin inte följer databas normaliseringskraven. Vilket leder till och innebär mycket dubbletter och många fält som kommer att innehålla *null* värden. Förmodligen är detta ingen strategi som någon databas administratör kommer att godkänna.
+Nackdelen med TPT är att prestandan kan bli lidande om komplexa arvshierarkier används. På grund av att alla frågor kräver *joins* mellan flera tabeller.
