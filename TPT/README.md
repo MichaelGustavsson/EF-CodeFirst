@@ -6,7 +6,7 @@ Syftet med *Table per Type* strategin är att stödja databas  normalisering, vi
 
 Att ändra ifrån standard beteendet i Entity Framework, det vill säga *Table per Hierarchy* till att få en tabell per klass *Table per Type* är väldigt enkelt. Göra bara nedanstående ändringar på klassdefinitionerna.
 
-```
+```javascript
     [Table("Persons")]
     public class Person
     {
@@ -53,3 +53,28 @@ När sedan databasen skapas kommer en tabell per klass att definieras se bilden 
 Varje tabell kommer nu endast att innehålla information om sin egen entitet.
 
 [![tableresult-TPT.png](https://i.postimg.cc/v8rFDrjg/tableresult-TPT.png)](https://postimg.cc/QVdnyTjh)
+
+#### Hantera result av frågor
+Att tänka på när vi använder LINQ och ställer frågor via vårt *Object Context* är att vi använder vår basklass för att hämta data ifrån vår database. Vid användandet av TPH så ligger allt data i en och samma tabell med en *discriminator* kolumn som håller reda på vilken härledd klass datat tillhör. Det gör att om vi ställer följande fråga:
+ ```
+ var result = db.Person.ToList();
+ ```
+ Så kommer *Entity Framework* automatiskt att mappa datat till korrekta klasser, se bilden nedan.
+ 
+[![base-Query-Result.png](https://i.postimg.cc/pr1W1Dqz/base-Query-Result.png)](https://postimg.cc/H8X1r7Gk)
+
+Detta i sin tur gör att vi måste ange vilken klass vi egentligen vill mappa datat till vid frågetillfället.
+
+```javascript
+    var db = new CourseContext();
+    var result = db.Person.OfType<Instructor>().ToList();
+    var instructors = result.ToList();
+
+    return View(instructors);
+```
+## Summering
+### Fördelar och nackdelar
+#### Fördelar
+Fördelen med denna strategi är dess enkelhet och prestanda. Det behövs inga komplexa *joins* mellan tabeller för att hämta data. Databasen är i princip denormaliserad.
+#### Nackdelar
+Den största nackdelen är att strategin inte följer databas normaliseringskraven. Vilket leder till och innebär mycket dubbletter och många fält som kommer att innehålla *null* värden. Förmodligen är detta ingen strategi som någon databas administratör kommer att godkänna.
