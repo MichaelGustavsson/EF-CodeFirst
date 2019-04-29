@@ -71,7 +71,7 @@ Att tänka på när vi använder LINQ och ställer frågor via vårt *Object Con
 
 Detta i sin tur gör att vi måste ange vilken klass vi egentligen vill mappa datat till vid frågetillfället.
 
-```
+```javascript
     var db = new CourseContext();
     var result = db.Person.OfType<Instructor>().ToList();
     var instructors = result.ToList();
